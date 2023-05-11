@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://disbsbidfypjq"]
+
+[ext_resource type="Script" path="res://Blasteroid.gd" id="1_vnabs"]
+[ext_resource type="PackedScene" uid="uid://d1i582howm2rc" path="res://Managers/AttributeManager.tscn" id="2_mevr4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ddvw1"]
+
+[node name="Blasteroid" type="RigidBody2D"]
+script = ExtResource("1_vnabs")
+
+[node name="BlasteroidCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ddvw1")
+
+[node name="AttributeManager" parent="." instance=ExtResource("2_mevr4")]
+max_health = 5

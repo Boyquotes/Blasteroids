@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1i582howm2rc"]
+
+[ext_resource type="Script" path="res://Managers/AttributeManager.gd" id="1_b1mk3"]
+
+[node name="AttributeManager" type="Node"]
+editor_description = "A component used to keep track of owner's health and tasks to be carried out upon health reaching 0."
+script = ExtResource("1_b1mk3")

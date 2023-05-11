@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp83k2id6nbg5"]
+
+[ext_resource type="Texture2D" uid="uid://dqdjfox6xka05" path="res://icon.svg" id="1_7kmv3"]
+[ext_resource type="Script" path="res://Actors/Player.gd" id="1_ad86y"]
+[ext_resource type="PackedScene" uid="uid://d1i582howm2rc" path="res://Managers/AttributeManager.tscn" id="3_x1ex7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26fuh"]
+size = Vector2(128, 128)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_ad86y")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_7kmv3")
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_26fuh")
+
+[node name="AttributeManager" parent="." instance=ExtResource("3_x1ex7")]
+max_health = 10
